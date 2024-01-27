@@ -1,8 +1,8 @@
 # bigram-llm-scratch
 
 PyTorch implementation of Bigram Large Language Models, which trains on a piece of text and generates new text similar to it.<br/>
-Trainable parameters : 25.37 million<br/>
-Vocabulary size : 104
+Trainable parameters : <b>25.37 million</b><br/>
+Vocabulary size : <b>104</b>
 
 ## Files
 - ```train.py``` - Defines the model architecture and hyperparameters and runs training loop.
