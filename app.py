@@ -11,6 +11,8 @@ vocab_size = 104
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model = BGM(vocab_size)
+
+# load the model after training.
 model.load_state_dict(torch.load('./b64_bl128_3e4_h8_l6_do0.2_10k.pth', map_location=device))
 model.to(device)
 model.eval()
@@ -34,9 +36,11 @@ def index():
     if request.method == 'POST':
 
         max_new_tokens = int(request.form['max_new_tokens'])
-
+        
         context = torch.zeros((1, 1), dtype=torch.long, device=device)
         generated_text = generate_text(model, context, max_new_tokens)
+
+        # store outputs in session storage       --- (1)
         session['generated_text'] = generated_text
         session['max_new_tokens'] = max_new_tokens
 
@@ -49,6 +53,8 @@ def result():
     ''' 
         result page which displays generated text.
     '''
+
+    # (1) ----> pop it from session storage, so that URL is clean.
     generated_text = session.pop('generated_text', '')
     max_new_tokens = session.pop('max_new_tokens', 0)
 
