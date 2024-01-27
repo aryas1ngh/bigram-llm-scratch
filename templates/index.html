@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigram Transformer LLM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://wallpaperxyz.com/wp-content/uploads/Picture-Website-Wallpaper-FHD-Free-Download-Laptop-Desktop-Macbook-2510-Wallpaperxyz.com-13.jpg');
+            font-family: 'Arial', sans-serif;
+            /* color: #2c616d; */
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.654); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for the container */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 120px; /* Adjusted width */
+        }
+
+        button {
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .generated-text {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #d8e8e9;">Bigram LLM (from scratch!)</h1>
+    <form method="POST">
+        <div class="container">
+        <label for="max_new_tokens">Number of characters to generate:</label>
+        <input type="number" name="max_new_tokens" required>
+        <button type="submit">Generate</button>
+    </form>
+        {% if generated_text %}
+            <div class="generated-text">
+                <h2>Generated Text:</h2>
+                <p>{{ generated_text }}</p>
+                <p>Max New Tokens: {{ max_new_tokens }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
