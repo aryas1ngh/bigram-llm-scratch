@@ -16,10 +16,13 @@ Vocabulary size : <b>104</b>
 
 ## Screenshots
 - Index Page:<br/>
-<img width="500" src="https://github.com/aryas1ngh/bigram-llm-scratch/blob/main/index_screen.png?raw=true">
+<img width="500" src="./index_screen.png">
 
 - Result Page:<br/>
-<img width="500" src="https://github.com/aryas1ngh/bigram-llm-scratch/blob/main/result_screen.png?raw=true">
+<img width="500" src="./result_screen.png">
+
+- Training and validation loss: <br/>
+<img width="500" src="./train_val_loss.png">
 
 
 ## References 
