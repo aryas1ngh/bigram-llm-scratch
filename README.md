@@ -11,6 +11,7 @@ Vocabulary size : <b>104</b>
 - ```app_model.py``` - Defines the same model architecture to be used for instantiation and inference by the web app.
 - ```notebooks/``` contains Jupyter Notebook having step-by-step implementation and training of the code.
 - ```data/``` contains the raw text file on which the model is trained.
+- ```templates/``` contains the HTML codes for webpages displayed by Flask.
 
 ## Attention mechanism
 <img width="300" src="https://miro.medium.com/v2/resize:fit:1270/1*LpDpZojgoKTPBBt8wdC4nQ.png">
