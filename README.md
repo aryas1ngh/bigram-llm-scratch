@@ -12,6 +12,10 @@ Vocabulary size : <b>104</b>
 - ```data/``` contains the raw text file on which the model is trained.
 - ```templates/``` contains the HTML codes for webpages displayed by Flask.
 
+## Clone the repo 
+```bash
+git clone https://github.com/aryas1ngh/bigram-llm-scratch.git
+```
 ## Attention mechanism
 <img width="300" src="https://miro.medium.com/v2/resize:fit:1270/1*LpDpZojgoKTPBBt8wdC4nQ.png">
 
